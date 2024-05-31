@@ -9,4 +9,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('Autos', App\Http\Controllers\AutosController::class);
+Route::resource('Autos', App\Http\Controllers\AutoController::class);

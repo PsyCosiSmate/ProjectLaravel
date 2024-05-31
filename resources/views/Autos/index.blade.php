@@ -3,38 +3,53 @@
 @section('title', 'Listado de Autos')
 
 @section('content')
-    <h1>Listado de Autos</h1>
-    <a href="{{ route('autos.create') }}" class="btn btn-primary mb-3">Registrar Auto</a>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Placa</th>
-                <th>Año</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($autos as $auto)
+    <div class="container mt-5">
+        <h1>Listado de Autos</h1>
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+        <a href="{{ route('autos.create') }}" class="btn btn-primary mb-3">Registrar Nuevo Auto</a>
+        <table class="table table-bordered">
+            <thead>
                 <tr>
-                    <td>{{ $auto->id }}</td>
-                    <td>{{ $auto->marca }}</td>
-                    <td>{{ $auto->modelo }}</td>
-                    <td>{{ $auto->placa }}</td>
-                    <td>{{ $auto->anio }}</td>
-                    <td>
-                        <a href="{{ route('autos.show', $auto->id) }}" class="btn btn-info btn-sm">Ver</a>
-                        <a href="{{ route('autos.edit', $auto->id) }}" class="btn btn-warning btn-sm">Editar</a>
-                        <form action="{{ route('autos.destroy', $auto->id) }}" method="POST" style="display:inline-block;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro?')">Eliminar</button>
-                        </form>
-                    </td>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Placa</th>
+                    <th>Año</th>
+                    <th>Kilometraje</th>
+                    <th>Tipo de Combustible</th>
+                    <th>Precio</th>
+                    <th>Transmisión</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach($autos as $auto)
+                    <tr>
+                        <td>{{ $auto->marca }}</td>
+                        <td>{{ $auto->modelo }}</td>
+                        <td>{{ $auto->placa }}</td>
+                        <td>{{ $auto->anio }}</td>
+                        <td>{{ $auto->kilometraje }}</td>
+                        <td>{{ $auto->tipo_combustible }}</td>
+                        <td>{{ $auto->precio }}</td>
+                        <td>{{ $auto->transmision }}</td>
+                        <td>{{ $auto->descripcion }}</td>
+                        <td>
+                            <a href="{{ route('autos.show', $auto->id) }}" class="btn btn-info btn-sm">Ver</a>
+                            <a href="{{ route('autos.edit', $auto->id) }}" class="btn btn-warning btn-sm">Editar</a>
+                            <form action="{{ route('autos.destroy', $auto->id) }}" method="POST" style="display:inline-block;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection
