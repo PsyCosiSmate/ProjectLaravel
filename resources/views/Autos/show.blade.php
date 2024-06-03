@@ -15,6 +15,7 @@
                 <p class="card-text"><strong>Precio:</strong> ${{ $auto->precio }}</p>
                 <p class="card-text"><strong>Transmisión:</strong> {{ $auto->transmision }}</p>
                 <p class="card-text"><strong>Descripción:</strong> {{ $auto->descripcion }}</p>
+                 <p class="card-text"><strong>Imagen:</strong> {{ $auto->img }}</p>
                 <a href="{{ route('autos.index') }}" class="btn btn-primary">Volver al Listado</a>
             </div>
         </div>
