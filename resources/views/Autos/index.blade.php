@@ -22,6 +22,7 @@
                     <th>Tipo de Combustible</th>
                     <th>Precio</th>
                     <th>Transmisión</th>
+                     <th>Imagen</th>
                     <th>Descripción</th>
                     <th>Acciones</th>
                 </tr>
@@ -37,6 +38,7 @@
                         <td>{{ $auto->tipo_combustible }}</td>
                         <td>{{ $auto->precio }}</td>
                         <td>{{ $auto->transmision }}</td>
+                         <td>{{ $auto->imagen }}</td>
                         <td>{{ $auto->descripcion }}</td>
                         <td>
                             <a href="{{ route('autos.show', $auto->id) }}" class="btn btn-info btn-sm">Ver</a>
