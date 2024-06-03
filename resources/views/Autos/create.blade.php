@@ -45,7 +45,7 @@
                 <input type="text" class="form-control" id="transmision" name="transmision" required>
             </div>
             <div class="mb-3">
-            <label for="img">Imagen:</label>
+            <label for="img" class="form-label">Imagen:</label>
             <input type="file" class="form-control-file" id="img" name="imagen">
         </div>
             <div class="mb-3">
