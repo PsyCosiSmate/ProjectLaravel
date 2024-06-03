@@ -45,6 +45,10 @@
                 <label for="transmision" class="form-label">Transmisión</label>
                 <input type="text" class="form-control" id="transmision" name="transmision" value="{{ $auto->transmision }}" required>
             </div>
+             <div class="mb-3">
+            <label for="img" class="form-label">Imagen:</label>
+            <input type="file" class="form-control-file" id="img" name="imagen" value= "{{ $auto->img}}"required>
+        </div>
             <div class="mb-3">
                 <label for="descripcion" class="form-label">Descripción</label>
                 <textarea class="form-control" id="descripcion" name="descripcion">{{ $auto->descripcion }}</textarea>
