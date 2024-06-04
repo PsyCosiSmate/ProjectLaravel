@@ -13,10 +13,11 @@ class CreateAutosTable extends Migration
             $table->string('marca');
             $table->string('modelo');
             $table->string('placa')->unique();
-            $table->integer('anio');
+            $table->integer('año');
             $table->integer('kilometraje');
             $table->string('tipo_combustible');
-            $table->decimal('precio', 10, 2);
+            $table->decimal('precio_nuevo', 10, 2);
+            $table->decimal('precio_usado', 10, 2);
             $table->string('transmision');
             $table->text('descripcion')->nullable();
             $table->timestamps();
