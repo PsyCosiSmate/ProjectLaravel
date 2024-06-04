@@ -22,7 +22,8 @@ class ControladorAutomoviles extends Controller
             'precio nuevo' => 'required|numeric|min:0',
             'precio usado' => 'required|numeric|min:0',
             'kilometraje' => 'required|integer|min:0',
-            'Observaciones' => 'nullable|string'
+            'Observaciones' => 'nullable|string',
+             'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
         // Creación del auto
