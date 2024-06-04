@@ -37,8 +37,12 @@
                 <input type="text" class="form-control" id="tipo_combustible" name="tipo_combustible" required>
             </div>
             <div class="mb-3">
-                <label for="precio" class="form-label">Precio</label>
-                <input type="number" step="0.01" class="form-control" id="precio" name="precio" required>
+                <label for="precio_nuevo" class="form-label">Precio Nuevo</label>
+                <input type="number" step="0.01" class="form-control" id="precio_nuevo" name="precio nuevo" required>
+            </div>
+             <div class="mb-3">
+                <label for="precio_usado" class="form-label">Precio Usado</label>
+                <input type="number" step="0.01" class="form-control" id="precio_usado" name="precio usado" required>
             </div>
             <div class="mb-3">
                 <label for="transmision" class="form-label">Transmisión</label>
