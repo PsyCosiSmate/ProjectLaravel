@@ -20,7 +20,8 @@
                     <th>Año</th>
                     <th>Kilometraje</th>
                     <th>Tipo de Combustible</th>
-                    <th>Precio</th>
+                    <th>Precio Nuevo</th>
+                    <th>Precio Usado</th>
                     <th>Transmisión</th>
                      <th>Imagen</th>
                     <th>Descripción</th>
@@ -36,7 +37,8 @@
                         <td>{{ $auto->anio }}</td>
                         <td>{{ $auto->kilometraje }}</td>
                         <td>{{ $auto->tipo_combustible }}</td>
-                        <td>{{ $auto->precio }}</td>
+                        <td>{{ $auto->precio_nuevo }}</td>
+                        <td>{{ $auto->precio_usado }}</td>
                         <td>{{ $auto->transmision }}</td>
                          <td>{{ $auto->imagen }}</td>
                         <td>{{ $auto->descripcion }}</td>
