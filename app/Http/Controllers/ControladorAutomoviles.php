@@ -25,6 +25,14 @@ class ControladorAutomoviles extends Controller
             'Observaciones' => 'nullable|string',
              'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
+         $datosValidos['slug'] = Str::slug($datosValidos['marca'] . ' ' . $validatedData['modelo'] . ' ' . $validatedData['año']). $validatedData['precio nuevo'] . ' ' . $validatedData['Precio Usado'] . ' ' . $validatedData['kilometraje'] . ' ' . $validatedData['Observaciones'] . ' '. $validatedData['img'] . ' '  ;
+
+
+         if ($request->hasFile('image')) {
+             $fileName = $datosValidos['slug'] . '.' . $request->file('image')->getClientOriginalExtension();
+             $request->file('image')->storeAs('public/car-images', $fileName);
+             $datosValidos['img'] = $fileName;
+         }
 
         // Creación del auto
         $auto = Auto::create($datosValidos);
