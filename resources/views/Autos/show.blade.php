@@ -12,7 +12,8 @@
                 <p class="card-text"><strong>Año:</strong> {{ $auto->anio }}</p>
                 <p class="card-text"><strong>Kilometraje:</strong> {{ $auto->kilometraje }}</p>
                 <p class="card-text"><strong>Tipo de Combustible:</strong> {{ $auto->tipo_combustible }}</p>
-                <p class="card-text"><strong>Precio:</strong> ${{ $auto->precio }}</p>
+                <p class="card-text"><strong>Precio Nuevo:</strong> ${{ $auto->precio_nuevo }}</p>
+                 <p class="card-text"><strong>Precio Usado:</strong> ${{ $auto->precio_usado }}</p>
                 <p class="card-text"><strong>Transmisión:</strong> {{ $auto->transmision }}</p>
                 <p class="card-text"><strong>Descripción:</strong> {{ $auto->descripcion }}</p>
                  <p class="card-text"><strong>Imagen:</strong> {{ $auto->img }}</p>
