@@ -20,6 +20,7 @@ class Auto extends Model
         'transmision',
         'img',
         'descripcion',
+         'slug',
     ];
     public function Obtenerimg()
     {
